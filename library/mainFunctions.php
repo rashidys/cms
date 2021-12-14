@@ -1,10 +1,7 @@
 <?php 
 /**
-<<<<<<< HEAD
  * Библиотека функций
-=======
  * Основные фукции
->>>>>>> 398e8ec4c71f35686241fc4676218db108dbe560
  */
 /**
  * формирование запрашиваемой страницы
@@ -20,20 +17,13 @@ function loadPage($smarty, $controllerName, $actionName = 'index'){
 }
 /**
  * Загрузка шаблона
-<<<<<<< HEAD
  * @param unknown $smarty Обьект шаблонизатора
  * @param unknown $templateName Название файла шаблона
- */
-function loadTemplate($smarty, $templateName){
-=======
- * 
- * @param unknown $smarty
- * @param unknown $templateName
  */
 
 function loadTemplate($smarty, $templateName)
 {
->>>>>>> 398e8ec4c71f35686241fc4676218db108dbe560
+
     $smarty->display($templateName . TemplatePostfix);
 }
 
@@ -45,8 +35,7 @@ function loadTemplate($smarty, $templateName)
 function d($value = null, $die = 1){
     echo 'Debug: <br /><pre>';
     print_r($value);
-    echo '</pre>';
-    
+    echo '</pre>';    
     if ($die)die();
 }
 
