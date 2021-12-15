@@ -22,3 +22,27 @@ if (!mysqli_select_db($db, $dbname,)){
     exit();
     
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
