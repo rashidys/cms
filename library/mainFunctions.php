@@ -9,11 +9,12 @@
  * @param unknown $controllerName Название конторойллера
  * @param string $actionName  Название функции обработки страницы
  */
-function loadPage($smarty, $controllerName, $actionName = 'index'){
+function loadPage($smarty, $db, $controllerName, $actionName = 'index')
+{
     include_once PathPrefix . $controllerName . PathPostfix;
     $function = $actionName . 'Action';
     
-    $function($smarty);  
+    $function($smarty, $db);  
 }
 /**
  * Загрузка шаблона
@@ -38,6 +39,24 @@ function d($value = null, $die = 1){
     echo '</pre>';    
     if ($die)die();
 }
+
+
+function createSmartyRsArray($rs)
+{
+    if(!$rs) return false;
+    
+    $smartyRs = array();
+    while ($row = mysqli_fetch_assoc($rs))
+    {
+        $smartyRs[] = $row;
+    }
+    
+    return $smartyRs;
+}
+
+
+
+
 
 
 

@@ -18,8 +18,8 @@ function testAction(){
  * @param unknown $smarty шаблонизатор
  */
 
-function indexAction($smarty){
-    $rsCategories = getAllMainCatsWithChildren();
+function indexAction($smarty, $db){
+    $rsCategories = getAllMainCatsWithChildren($db);
        
     $smarty->assign('pageTitle', 'Главная страница сайта');
     $smarty->assign('rsCategories', $rsCategories);
